@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- div raiz onde nosso app será renderizado -->
+    <div id="root"></div>
+
+    <!-- CDN Links para adicionar o React, ReactDOM e o Babel a nossa página -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+
+    const ContainerForm = () => {
+        return(
+            <div className="container-form">
+                <h2>login</h2>
+                <input type="email" placeholder="Email" id="input-email"/>
+                <input type="password" placeholder="Password" id="input-pass"/>
+                <p className="sign-text"><input type="checkbox" id="check"/> Remember me</p>
+                <button>login</button>
+                <p className="sign-text">Or sign with GitHub</p>
+                <a className="git" href="https://github.com"><i class="fab fa-github"></i></a>
+                <p className="sign-text">Not a member? <a href="">Sign-up here</a></p>
+            </div>
+        )
+    }
+    
+    const App = () => {
+        return(
+            <ContainerForm />
+        )
+    }
+
+    const app = document.getElementById("root")
+    ReactDOM.render(<App />, app)
+    </script>
+
+</body>
+</html>
